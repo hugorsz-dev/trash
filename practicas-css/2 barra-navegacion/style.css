@@ -1,0 +1,50 @@
+body {
+    font-family:sans-serif;
+    margin:0;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    display:flex; /* (flex-flexible) Muestra los elementos dispuestos de una forma responsiva, adaptándose a la pantalla */
+    justify-content: space-between; /*Reparte los elementos en bloques de izquierda-derecha: como solo tenemos dos bloques <a> y <nav>, uno lo asigna a la izquierda y otro a la derecha*/
+    align-items: center; /*Alinea verticalmente el contenido */
+    background-color: rgb(38,56,63);
+    padding: 0rem 2rem 0rem 2rem;
+    font-weight: 600; /*Ancho de la fuente */   
+
+}
+
+.logo {
+    display:flex;
+    align-items:center;
+}   
+
+.logo img {
+    width:  4rem;
+    margin-right: 0.5rem;
+}
+
+nav a {
+    padding: 0px 0.5rem;
+}
+
+nav a:hover {
+    transition: color, 0.3s;
+    color: rgb(96,157,175);
+}
+
+@media (max-width:680px) { /* Cuando la pantalla tenga un ancho de 680... */
+
+    header {
+        flex-direction: column; /*La propiedad que antes habíamos usado para alinear, se utiliza para segmentar en columnas el header*/
+    }
+
+    nav {
+        padding:10px 0px; /* Esta nueva disposición requiere un ligero margen vertical interior */
+    }
+
+}

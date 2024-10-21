@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<head>
+    <title>Mi blog de prueba</title>
+    <!-- Set de caracteres universal-->
+    <meta charset="utf-8"/>
+    <!-- Fuente: Monserrat 400-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Fuente: Monserrat 700-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <!-- Vinculo CSS -->
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    
+    <header> <!-- Cabecera: la parte que contiene el título, p.ej, nombre del blog-->
+        <h1 id="titulo"> Blog de Zahara de la Sierra</h1> <!-- A este elemento le ha sido agregado un id, para tenerlo identificado-->
+        <h2> Este es el subtítulo</h2>
+
+    </header> 
+
+    <section class="container"> <!-- Definir secciones: su función define secciones, es una etiqueta más moderna que div --> 
+        <article class ="post"> <!-- El Class es similar al ID, pero puede ser compartido por varios elementos a la vez --> 
+            <h2> Entrada de prueba. </h2>
+            <p> Esta es una destripción de la entrada.</p>
+            <img src="img/zahara.jpg"/>
+            <p>Cuerpo de la entrada. </p>
+        </article> 
+        <article class ="post"> 
+            <h2> Entrada de prueba 2.</h2>
+            <p> Esta es una descripción de la entrada. </p>
+            <img src="img/zahara3.jpg"/>
+            <p>Cuerpo de la entrada.</p>
+        </article>
+        <article class ="post">
+            <h2> Entrada de prueba 3.</h2>
+            <p> Esta es una descripción de la entrada </p>
+            <img src="img/zahara4.jpeg"/>
+            <p> Cuerpo de la entrada.</p>
+        </article>
+    </section> 
+    
+    <footer> <!-- Pie de página: la parte de abajo.-->
+        <section class="float"> 
+            <a href="#titulo"> Volver al inicio</a> <!-- Podemos hacer referencia a la ID en un atributo ancle-->
+            <a href="mailto:hugoruizschz@gmail.com">  Emilio de contacto  </a>
+        </section>
+
+        <p> Copyright: Hugo Ruiz Sánchez</p>
+        
+    </footer> 
+
+
+</body>
+</html>

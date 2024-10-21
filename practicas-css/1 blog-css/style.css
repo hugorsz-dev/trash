@@ -1,0 +1,81 @@
+html {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+}
+    
+
+body {
+    
+    margin:0; /*Es necesario fijar el margen el 0, para resetear el contenido que por defecto HTML fija*/
+    background-color: rgb(230, 236, 236);
+}
+
+header {
+    background-color:rgb(38,56,63);
+    color:white;
+    padding: 3rem 2rem; /*vertical, horizontal*/
+    text-align: center;
+}
+
+header h1 {
+    font-size: 4rem;
+    text-decoration: underline;
+}
+
+header h2 {
+    font-size: 2rem; 
+    font-style: italic;
+}
+
+.container {
+    width: 400px; 
+    margin: 0 auto; /* Elemento para el centrado */
+}
+
+.container img { 
+    width: 400px; /*Las imágenes deben de corresponder con el ancho, o no podrán centrarse correctamente */
+}
+
+section article {
+    background-color: white;
+    margin: 1rem 0; /*vertical, horizontal*/
+    padding: 0.25rem 0;
+    border-radius: 0.5rem;
+}
+
+section article h2, section article p {
+    margin: 1rem 1rem;
+}
+
+section article:hover {
+    transition: box-shadow 0.3s ease; /*Anima una propiedad concreta, añadiendole una transición*/
+    box-shadow: 0 0.1rem 0.4rem rgba(0, 0, 0, 0.416); /*Dezplazamiento de la sombra hacia la derecha - hacia abajo - difuminación - color*/
+    cursor: pointer;
+}
+
+footer {
+    background-color:rgb(38,56,63);
+    padding: 3rem; 
+    color: white;
+}
+
+footer section.float {
+    float: right;
+
+}
+
+footer p {
+    margin: 0px;
+    transition: color 0.3s ease;
+}
+
+footer a {
+    padding: 1em;
+    color:white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    transition: color 0.3s ease;
+    color:rgb(90, 90, 234);
+}
+

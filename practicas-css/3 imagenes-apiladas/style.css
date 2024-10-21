@@ -1,0 +1,101 @@
+body {
+    font-family: sans-serif;
+    margin: 0px;
+    background-color: #6c584c;
+}
+
+.container-imagenes {
+
+    justify-content: center; /*Centrar el FLEX de izquierda a derecha*/
+    align-items: center;
+    height: 100vh; /*El VH representa la pantala: 100 representa una fracción del 100% (una linea vertical que va desde arriba hasta abajo en un 100%, para que el align items funcione*/
+    display: flex; /*El container organiza los bloques horizontalmente*/
+}
+
+.container-imagenes .imagen {
+    position: relative; /*Permite el desplazamiento de un bloque sin moverse fuera. Necesario para adaptar la descripción con calc*/
+    margin-right: -0.5rem; /*Para que los componentes se piseen unos a otros*/
+    display: inline-flex;
+    flex-direction: column; /*Cada imagen tendrá una disposición en columna: sus bloques se verán la zona inferior. Se permite la dirección "row" (fila) que es por defecto*/
+}
+
+.container-imagenes .imagen img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    
+}
+
+
+.container-imagenes .imagen .container-descripcion {
+    display:none; /*Este bloque no se ve en principio, hasta que se reproduce el hover.*/
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    min-width: 100px;
+    width: 150px;
+    height: 25px;
+    position: absolute; /*Permite que el bloque no esté limitado por el ancho o el alto*/
+    margin-top: -63px; /*Aprovechando la caracteristica anterior, asigna alto*/
+    left: calc(-5%); /*La descripción se adaptará con un 25% respecto a la izquierda de la imagen. Para que esto sea posible, la imagen debe estar en forma "position relative" para hacerla variable*/
+    border-radius: 5px;
+    padding: 10px 15px;
+
+
+    
+}
+
+.container-imagenes .imagen .container-descripcion .descripcion  {
+    display: inline-block; /*Añade un bloque dentro de un bloque, esto permite aislar los elementos y hacer lo siguiente:*/
+    width: 100%;
+    text-overflow: ellipsis; /*Si el texto sobrepasa el padding, establece un límite "hola me llam..."*/
+    overflow: hidden; /*Es necesario complementarlo con el overflow: Hidden para que se oculte*/
+    padding: 5px;
+    white-space: nowrap; /*Si hay espacios en blanco, los hace más pequeños*/
+    margin:0px;
+    box-sizing: border-box;
+ 
+    text-align: center;
+  
+}
+
+
+.container-imagenes .imagen:hover .container-descripcion {
+
+    display: flex;
+
+}
+
+.container-imagenes .imagen .container-descripcion .descripcion::before {
+    
+    content:"";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    bottom: -20px;
+    left: calc(40%);
+    /*La forma de establecer una flecha rápidamente es asignando bordes a una cuadrícula, que apareceran como triángulos: ejemplo*/
+    border-top: solid 10px black;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    
+
+   
+}
+
+.container-imagenes .imagen:hover img {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+    
+}
+
+@media (max-width: 680px) {
+
+    .container-imagenes {
+        flex-direction: column;
+        margin:50px;
+    }
+     
+}

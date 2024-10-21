@@ -1,0 +1,105 @@
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+
+.body {
+    font-family: sans-serif;
+}
+
+h1,h2 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    margin:0;
+}
+
+h2 {
+    width: 100%;
+    text-align: center;
+    margin: 0px;
+    font-size: 1.3rem;
+    font-style:italic;
+    left: 5%;
+    position: relative; /*Si no es relativo, entonces no se podra poner ligeramente a la izquierda*/
+    font-weight:100; /*para modificar el grosor de la letra*/
+}
+
+.search-bar { 
+    width: 50%;
+    border: solid 1px #ccc; /*Borde que recubrirá a la caja*/
+    border-radius: 30px;
+    display: flex; 
+    flex-direction: row; /*Alineacion como una fila*/
+    align-items: center; /*Elementos centrados*/
+    padding: 5px 10px;
+    margin: 12px auto;
+
+}
+
+.search-bar:focus-within{
+    border: solid 1px #aaa; /*Cuando está focalizado (escribiendo, dando click) en la searchbar, se cambia el borde a negro.*/
+    box-shadow: 0px 2px 5px rgb(128, 128, 128, 0.5); /*x, y,  radio (difuminación)*/
+}
+
+.search-bar input {
+    border:none; /*Como la caja ya tiene un borde, se elimina del imput*/
+    outline:none; /*Linea exterior*/
+    padding: 10px;
+    font-size: 18px;
+    flex: 1; /*Detecta valores vacíos Y LOS RELLENA, por lo que los botones de micro y busqueda los desplaza al final*/
+}
+
+.search-bar .actions {
+    display: flex;
+    gap: 5px; /*Separación entre los elementos en un flex*/
+}
+
+.search-bar .actions button {
+    border:none;
+    outline: none;
+    background:none; /*Por default, border, outline y background están habilitados*/
+    cursor: pointer;
+    color: rgb(85, 85, 85); /*Gracias a la función de los botones importada por google, podemos cambiar su color*/
+}
+
+.search-bar .actions button:hover {
+    color:  rgb(14, 139, 216);
+}
+
+@media (max-width: 650px) {
+
+    .actions {
+        flex-direction: column;
+        margin:10px, 10px, 10px, 10px;
+    }
+
+    .search-bar {
+        width: 100% ;
+    }
+     
+}
