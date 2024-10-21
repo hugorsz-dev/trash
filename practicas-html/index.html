@@ -1,0 +1,152 @@
+<!DOCTYPE html> <!-- Esta etiqueta permite identificar que el documento es un HTML. Si no está presente, el navegador procesará la página somo si se tratase de un archivo con formato antiguo -->
+
+<html>
+
+<head> <!-- Etiqueta de elementos no visibles, pero útiles para el documento-->
+    <title>Mi primera web</title> <!-- Título de la página, que aparece en la cabecera del navegador. Es la que procesarán buscadores, por lo que es importante.-->
+    <meta charset="utf-8"/>  <!-- Codificación de lenguaje: el estándar UTF-8 contiene todos los caracteres posibles, es necesario usarla-->
+    <meta name ="keywords" content ="pagina, prueba, html, practica, html5" /><!-- Sirve para indicar las palabras clave de la página-->
+    <meta name ="author" content ="Hugo Ruiz Sánchez" /> <!-- Indica el autor-->
+    <meta name ="copyright" content="Zhugors INC" /> <!-- Indica copyright-->
+    <meta name="robots" content ="index"> <!-- Puede ser "index" o "noindex", permite  a los buscadores indexar o no indexar la página-->
+    <style>
+        table, th, td {
+            border: 1px solid black; 
+        }
+    </style>
+</head>
+
+<body>
+    
+
+    <h1>Heanding h1: Titulo</h1> <!-- La etiqueta h1 indica el título de la página web. Es preciso usarla, porque este es el estándar que el navegador procesa para identificar los títulos, y facilita el alcance a buscadores-->
+    <h2>Heading h2: Subtitulo</h2> <!-- Muestra subtítulos.-->
+    <h3>Heading h3: subsubtitulo</h3>
+    <h4>Heading h3: subsubsubtitulo</h4>
+    <h5>Heading h3: subsubsubsubtitulo</h5>
+    <h6>Heading h3: subsubsubsubsubtitulo</h6>
+    <p> Hola, esta es una etiqueta de párrafo.</p> <!-- Este es el párrafo en que debemos introducir el texto. -->
+    <p> Aquí hay una nueva línea. </p>
+    <hr> <!-- Esta etiqueta permite distanciar el texto, introduciendo un separador.-->
+    <br> <!-- Esta etiqueta realiza un salto de línea-->
+    <h2> Un subtítulo </h2>
+    <p> Este texto es <span style="color:mediumblue"> sustantivamente más largo </span> que los anteriores. Si esto es así, se debe a que será utilizado 
+        como prueba para aplicar una nueva funcionalidad.</p> <!-- El span permite realizar una selección de texto.-->
+    <img src="img/google.png" width ="25%"/>  
+    <!-- Permite la visualización de imágenes, está usando una ruta perteneciente a la carpeta img ubicada en la raíz-->
+    <!-- Si le indicamos solo el ancho (width), ajustará automáticamente el alto-->
+    <br>
+    <a href="https://www.google.es/">Ir a google.es</a> <!-- Etiqueta "ancle" o "anclar", permite ligar contenido web-->
+    <br>
+    <a href="https://www.google.es/" target="_blank"> Ir a google en una nueva pestaña </a> <!-- El atributo ANCLE permite abrir el contenido en una nueva pestaña-->
+
+    <form action ="/formulario" method="POST">  <!-- El formulario en su atributo ACTION define la ruta donde se guardará el formulario. El métododo GET envia la información por URL, y el POST en un formulario comprobable en inspeccionar elemento-->     
+        <label for="nombre_id" > Nombre: </label> 
+        <input type="text" id="nombre_id" name="nombre_server" placeholder ="Introduzca su nombre de usuario"/>
+        <br> 
+        <label for="apellido_id"> Apellido: </label>
+        <input type="text" id="apellido_id" name="apellido_server" placeholder ="Introduzca su apellido" value ="Ramirez"/>
+
+        <br>
+        <label for="comentario_id"> Introduzca comentario</label>
+        <textarea id="comentario_id" placeholder="comentario" name ="comentario_server" cols ="50" rows="10"> Valor por defecto, puesto que no puede usarse el value </textarea>
+
+        <input type="submit"/>
+        <!-- El submit puede sustituirse por botones-->
+        <button type="button"> <img src="img/google.png" width="25%"/> Botón que no hace nada</button>
+        <button type="reset"> Reiniciar formulario</button>
+        <button type="submit"> Enviar formulario </button>
+    </form>
+
+    <!-- FOR e ID
+        
+        En los formularios, la etiqueta "for" en el label identifica su pertenencia en un input "id". imput y label deben estar conectados
+        por "for" e "id" respectivamente, al clickar el label, nos llevará a rellenar el input.
+        
+        NAME
+        El servidor recibirá el "name" como nombre identificativo en el momento de procesar el formulario
+
+        PLACEHOLDER
+        Texto para indicar al usuario qué es lo que tiene que escribir
+
+        TYPE: Tipo de formulairo: texto, email, checkbox, file...... etc
+
+        VALUE: Es un valor por defecto
+    -->   
+
+    <!-- ul es una lista No ordenada.-->
+   
+    <h2> Lista no ordenada</h2>
+   
+    <ul> 
+
+        <li> Elemento 1 </li>
+        <li> Elemento 2 </li>
+        <li> Elemento 3 </li>
+        <li> Elemento 4 </li>
+
+    </ul>
+
+    <!-- ol order list.-->
+
+    <h2> Lista ordenada</h2>
+
+    <ol> 
+
+        <li value ="50"> Elemento 1 </li> <!-- Podemos indicar el valor de comienzo con VALUE-->
+        <li> Elemento 2 </li> 
+        <li> Elemento 3 </li>
+        <li> Elemento 4 </li>
+        <li> Secuencia de subelelementos:
+            <ol> 
+                <li style ="list-style-type:lower-alpha"> SubElemento 1</li> <!-- Podemos hacer sublistas dentro de las listas, puede configurarse su estilo-->
+                <li style ="list-style-type:lower-alpha"> SubElemento 2</li>
+                <li style ="list-style-type:lower-alpha"> SubElemento 3</li>
+                <li style ="list-style-type:lower-alpha"> SubElemento 4</li>
+            </ol>
+        </li>
+
+    </ol>
+
+
+    <table style="width:50%;"> 
+      
+        <!-- FILA 1: CABECERA DE LA TABLA-->
+        <thead> 
+            <tr> <!-- tr significa "fila": esta fila 1 está dedicada a las cabeceras: las columnas de las que se compondrá la tabla-->
+                <th> Producto </th> <!-- Esto es una cabecera, son las columnas de la table-->
+                <th> Precio </th>
+            </tr>
+        </thead>
+
+        <tbody>  <!-- TBODY Filas inferiores-->
+        <!-- FILA 2-->
+            <tr> 
+                <td> Felicidad </td>
+                <td> Invaluable </td>
+            </tr>
+        <!-- FILA 3-->
+            <tr> 
+                <td> Salmones</td>
+                <td> 10 euros</td>
+            </tr>
+
+            <tr>
+                <td> Esternoleidomastoideo </td>
+                <td> 20 eurazos</td>
+            </tr>
+        
+        <!-- FILA 4: FINAL-->
+     
+        <tfoot>
+            <td></td>
+            <td> Total: $$</t>
+        </tfoot>
+        
+        </tbody>
+
+    </table>
+
+</body>
+
+</html>

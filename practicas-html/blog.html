@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<head>
+    <title>Mi blog de prueba</title>
+</head>
+<body>
+    
+    <header> <!-- Cabecera: la parte que contiene el título, p.ej, nombre del blog-->
+        <h1 id="titulo"> Blog de Hugo Ruiz Sánchez</h1> <!-- A este elemento le ha sido agregado un id, para tenerlo identificado-->
+        <h2> Este es el subtítulo</h2>
+        <nav> <!-- Nav, barra de navegación-->
+            <ul> 
+                <li> <a href="http://google.es"> Google.es </a></li>
+                <li> <a href="http://yahoo.es"> Yahoo.es </a></li>
+                <li> <a href="http://bing.es"> Bing.es </a></li>
+            </ul>
+        </nav>
+    </header> 
+
+    <div > 
+        <p> Soy un párrafo dentro de div. Estas divisiones o secciones están obsoletas. </p>
+    </div>
+
+    <section> <!-- Definir secciones: su función define secciones, es una etiqueta más moderna que div --> 
+        <article class ="post"> <!-- El Class es similar al ID, pero puede ser compartido por varios elementos a la vez --> 
+            <h2> Entrada de prueba. </h2>
+            <p> Esta es una destripción de la entrada.</p>
+            <img src="img/google.png" width="20%"/>
+            <p>Google ¿posiblemente el peor buscador de la historia?</p>
+        </article> 
+        <article class ="post"> 
+            <h2> Entrada de prueba 2.</h2>
+            <p> ¿Es que acaso no era una suficiente?</p>
+            <img src="img/yahoo.jpeg" width="20%"/>
+            <p>Yahoo, probablemente el mejor buscador que internet ha concebido.</p>
+        </article>
+        <article class ="post">
+
+            <h2> Entrada de prueba 3.</h2>
+            <p> ¡Maldita sea!</p>
+            <img src="img/bing.png" width="20%"/>
+            <p>Bing... ¿qu-qué es esto?</p>
+            <p> En su lugar pondré un bonito vidrio</p>
+            <video src="video/reynimrod.mp4" controls="" width="15%"> </video> <!-- El vídeo no puede reproducirse sin el atributo "controls", que habilita la muestra de controles al usuario en el navegador-->
+            <audio src="video/reynimrod.mp4" controls=""> </audio> <!-- Puede subirse un video en formato de audio, pero solo se escuchará el audio del video. -->
+        </article>
+    </section> 
+
+    <aside> <!-- Es la barra lateral que comúnmente se encuentra en las páginas, pero esto se configurará con css-->
+
+        <p> Barra lateral. </p>
+    </aside>
+    
+    <footer> <!-- Pie de página: la parte de abajo.-->
+        <a href="#titulo"> Volver al inicio</a> <!-- Podemos hacer referencia a la ID en un atributo ancle-->
+        <br>
+        <a href="mailto:hugoruizschz@gmail.com">  Emilio de contacto  </a>
+        <p> Copyright: Hugo Ruiz Sánchez</p>
+    </footer> 
+
+
+</body>
+</html>
