@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasador automático - Hugo Ruiz Sánchez</title>
+    <link rel="stylesheet" href="../../estilos/estilo-otros.css">
+    <!-- Fuentes -->
+        <!-- Open Sans-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Source Code Pro -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- /Fuentes -->
+</head>
+
+<body>
+
+    <header > 
+        <a href="../../index.html"> <h1 id="titulo"> HUGO RUIZ SÁNCHEZ </h1> </a>
+        <h2 id="subtitulo"> Tasador automático de mercancía mágica</h2>
+    </header>
+
+    <main> 
+
+        <div class="categorias">
+
+            <h1> Tasador automático de mercancía mágica</h1>
+            <p> <i> Un sistema de cálculo adaptado adaptado a las particularidades del juego de rol 'Puerta de Baldur' </i></p>
+
+            <img class="portada" src="captura-web.png">
+
+            <h2> Introducción y funcionamiento</h2>
+
+            <p> Consiste en un sistema de gestión de inventarios, que emplea dos archivos JSON relacionados entre sí, a modo de bases de datos modificables desde database.js.</p>
+            <p> El fichero principal, database, está compuesto de diversos objetos mágicos, y el fichero de database_paquetes, es capaz de agruparlos entre sí, siendo dependiente del anterior para funcionar, conservando cada objeto dentro de su paquete las propiedades previamente definidas</p>
+            <p>El desarrollo de este proyecto pone de relieve un uso intensivo del DOM - para manipular e incrustar elementos en el HTML -, proyectando tablas con los cálculos pertinentes de la gestión de inventarios requerida para el trabajo de comerciante en el videojuego de rol "Puerta de Baldur", y en la gestión efectiva de información mediante JSON.</p>
+        
+            <ul> 
+                <li>En relación a la manipulación del DOM, destacan las funciones enContenedor(texto, tipo, container, atributos) para introducir cómodamente unas etiquetas dentro de otras a través del atributo id, y la función crearTabla(contenidoTabla, container, idRef, classRef) para generar rápidamente y sin incurrir en verbosidades y redundancias, tablas verticales con título, encabezado, cuerpo, y footer según lo especificado. Utilizadas ambas en la función de actualización de pantalla.</li>
+                <li>La actualización de la pantalla, actualizarInformacion(), siempre se realiza al pulsar los botones de sumar o restar (botones "+", "-"), permitiendo así el flujo de información en la cuenta de resultados cada vez que el usuario desea realizar una operación. Esta actualización no hace más que recorrer los archivos JSON - previamente modificados para guardar las unidades pulsadas y otros datos - y expresarlos en formato HTML.</li>
+                <li>La gestión de la base de datos cuenta con una sección de funciones dedicada, usadas ampliamente en el cálculo de resultados:</li>
+                <ul>
+                  <li>getValorObjeto(nombre, clave)</li>
+                  <li>setValorObjeto(nombre, clave, valor)</li>
+                  <li>getValorPaquete(nombre, clave)</li>
+                  <li>setValorPaquete(nombre, clave, valor)</li>
+                  <li>getValorPaqueteObjeto(nombrePaquete, nombreObjeto, clave)</li>
+                </ul>
+                <li>Funciones de formato, para dar formato al tiempo, formatoTiempoMins(mins), y a parámetros como la experiencia, las piezas de oro, unidades de mercancía con formatoNumerico(numero, extra) y así facilitar su legibilidad.</li>
+            </ul>
+
+            <h2> Demostración en vídeo</h2>
+
+            <iframe class="youtube" src="https://www.youtube.com/embed/YPvF22Rqwk4" title="Terminal Essentials - Librería para desarrollo de proyectos en terminal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <h2> Repositorio y descarga </h2>
+
+            <p> Puedes ver y descargar el repositorio en <a  target="_blank" href="https://github.com/hugoruizsanchez/tasador-automatico-mercancia-puerta-de-baldur">esta página de GitHub</a>.</p>
+
+        </div>
+    </main>
+    <footer> </footer>
+</body>
+
+</html>

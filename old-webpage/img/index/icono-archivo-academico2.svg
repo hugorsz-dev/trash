@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="48" height="48" viewBox="0 0 48 48" version="1.1" id="svg4489" sodipodi:docname="Ic_book_48px.svg" inkscape:version="0.92.1 r15371">
+  <metadata id="metadata4495">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title/>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs id="defs4493"/>
+  <sodipodi:namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1600" inkscape:window-height="837" id="namedview4491" showgrid="true" showguides="false" inkscape:lockguides="true" inkscape:zoom="9.5312102" inkscape:cx="39.946342" inkscape:cy="33.176257" inkscape:window-x="1276" inkscape:window-y="120" inkscape:window-maximized="1" inkscape:current-layer="svg4489">
+    <inkscape:grid type="xygrid" id="grid4497" empspacing="2"/>
+  </sodipodi:namedview>
+  <path d="M0 0h48v48h-48z" fill="none" id="path4485"/>
+  <path style="fill-rule:evenodd" d="M 7.8457031 4 L 8 44 L 12 44 L 12 4 L 7.8457031 4 z M 13.921875 4 L 13.921875 44 L 36 44 C 38.21 44 40 42.21 40 40 L 40 8 C 40 5.79 38.21 4 36 4 L 13.921875 4 z M 18 14 L 36 14 L 36 18 L 18 18 L 18 14 z M 18 22 L 36 22 L 36 26 L 18 26 L 18 22 z M 18 30 L 36 30 L 36 34 L 18 34 L 18 30 z " id="path4487"/>
+  <path inkscape:connector-curvature="0" d="m 20,-20.1 h 18.454547 v 3.54 H 20 Z m 0,-5.9 h 18.454547 v 3.54 H 20 Z m 0,11.8 h 18.454547 v 3.54 H 20 Z M 41.09091,-3.58 H 17.363637 V -34.26 H 41.09091 Z" id="path4501" style="stroke-width:1.24717867;fill:#ffffff;fill-opacity:1" sodipodi:nodetypes="cccccccccccccccccccc"/>
+</svg>

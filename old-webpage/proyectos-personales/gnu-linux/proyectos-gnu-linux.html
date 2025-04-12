@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archivo académico - Hugo Ruiz Sánchez</title>
+    <link rel="stylesheet" href="../../estilos/estilo-otros.css">
+    <!-- Fuentes -->
+        <!-- Open Sans-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Source Code Pro -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- /Fuentes -->
+</head>
+
+<body>
+
+    <header > 
+        <a href="../../index.html"> <h1 id="titulo"> HUGO RUIZ SÁNCHEZ </h1> </a>
+        <h2 id="subtitulo"> Proyectos en GNU/Linux</h2>
+    </header>
+
+    <main> 
+
+        <div class="categorias">
+
+            <h1> Proyectos en GNU/Linux </h1>
+            <p> <i> Algunos programas realizados en bash</i></p>
+
+            <img class="portada" src="gnuytux.png">
+
+            <h2> Script para XRandR que posibilita la reducción del brillo de los monitores desde una interfaz de software</h2>
+
+            <img class="portada" src="control_brillo.png">
+
+            <h3> Introducción y funcionamiento </h3>
+            <p>En vista de que no podía configurar manualmente el brillo de mis monitores, desarrollé una utilidad para los sistemas operativos GNU/Linux dedicada a los entornos de escritorio que usan el protocolo XRandR (la gran mayoría en el ecosistema Linux).</p>
+            
+            <ul> 
+                <li> Muestra en pantalla todos los monitores disponibles, en forma de lista numerada.</li>
+                <li> Permite elegir un monitor determinado o todos los monitores a la vez.</li>
+                <li> Ofrece la posibilidad de subir o bajar el brillo introduciendo porcentajes: 5% para el mínimobrillo, 100% para el máximo brillo, o +100% para dar mucha más claridad a la pantalla.</li>
+                <li> Está limitado para evitar subir o bajar el brillo en rangos inconvenientes (>5% o <200%)</li>
+            </ul>
+
+            <h3> Demostración en vídeo </h3>
+
+            <iframe class="youtube" src="https://www.youtube.com/embed/ym_JQ0jMk6c" title="Terminal Essentials - Librería para desarrollo de proyectos en terminal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            <h3> Repositorio y descarga </h3>
+
+            <p> Puedes ver y descargar el repositorio en <a  target="_blank" href="https://github.com/hugoruizsanchez/script-brightness-adjustment-xrandr">esta página de GitHub</a>.</p>
+
+
+            <h2> Script para wireless-tools que facilita la conexión a redes wifi WPA desde la terminal</h2>
+
+            <img class="portada" src="wpa_conexiones.png">
+
+
+            <p> Para equipos que no hacen uso de entornos de escritorio que faciliten la tarea de mantener una conexión wifi con cifrado WPA, desarrollé un script en bash que emplea las utilidades wireless-tools (ifconfig, iwlist, iwconfig, dhclient, wpa_supplicant) y recibe dos parámetros de entrada: nombre de la red y contraseña, que posteriormente archiva en un fichero de configuración y utiliza - hasta ser modificado - para establecer la conexión cada vez que se llama.</p>
+
+            <h3> Repositorio y descarga </h3>
+
+            <p> Puedes ver y descargar el repositorio en <a  target="_blank" href="https://github.com/hugoruizsanchez/script-wpa-wifi/">esta página de GitHub</a>.</p>
+
+            
+
+
+
+        </div>
+      
+    </main>
+    <footer> </footer>
+</body>
+
+</html>

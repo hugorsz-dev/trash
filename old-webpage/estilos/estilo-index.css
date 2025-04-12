@@ -1,0 +1,385 @@
+/* General */
+
+/* Eliminar estilos predeterminados */
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+ 
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+footer {
+    margin-bottom: 200px;
+}
+
+/* Header */ 
+
+header {
+    /* Propiedades de margen */ 
+    margin-left:395px;
+    margin-right: 395px; 
+    padding-top: 45px;
+
+    /*Transición para suavizar cambios de margen*/
+    transition: margin 0.3s ease-in-out;
+}
+
+#titulo, #subtitulo {
+    
+    /* Propiedades de texto */
+    text-align: center;
+    font-family: 'Open Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#titulo  {
+    
+    /* Propiedades de texto*/
+    color: black;
+    font-size: 55px;
+    font-weight: 300; 
+    
+    /* Propiedades de borde*/
+    font-family: sans-serif;
+    border-bottom: solid 4px rgb(0, 0, 0);
+    border-top: solid 4px rgb(0, 0, 0);
+    
+    /*Configuración de los bordes (borde de esquina)*/ 
+    padding: 7px 5px;
+    position: relative;
+    background:
+        linear-gradient(to right, black 4px, transparent 4px) 0 0,
+        linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+
+    /* Propiedades de color */ 
+    background-color: #fcfcfc;
+}
+
+#subtitulo {
+    /* Propiedades de margen */ 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    /* Propiedades de texto*/
+    letter-spacing: 3px;
+    font-weight: 100; 
+}
+
+/* Main */ 
+
+main {
+    
+    /* Propiedades de margen */ 
+    margin-left:395px;
+    margin-right: 395px; 
+    margin-top:45px;
+    height: 100%;
+
+    /*Propiedades de color*/ 
+    background-color: #fcfcfc;
+
+    /*Transición para suavizar cambios de margen*/
+    transition: margin 0.3s ease-in-out; /* Ajusta la duración y la función de temporización según tus necesidades */
+
+}
+
+.categorias {
+
+    /* Propiedades de disposición */ 
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+
+    /* Propiedades de margen */
+    padding:20px;
+
+    /*Propiedades de bordes*/
+    background:
+        linear-gradient(to right, black 4px, transparent 4px) 0 0,
+        linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+        linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+        linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.interior_bloque {
+    /* Propiedades de texto */ 
+    text-align: center; 
+}
+
+.imagen_interior_bloque {
+    /* Propiedades de margen */ 
+    width: 130px;
+    margin: 0 auto;
+
+    /* Propiedades de disposición */ 
+    display: block;
+
+    /* Suavizado al aumentar la imagen en el hover */
+    transition: transform 0.3s; 
+}
+
+.bloque:hover .imagen_interior_bloque {
+
+    /* Aumentar y subir la imagen al hacer el hover*/
+    transform: translateY(-5px) scale(1.05) ; /* Ajusta la distancia de levitación según tus necesidades */
+}
+
+.parrafo_interior_bloque {
+
+    /* Propiedades de margen */ 
+    margin-top: 15px;
+    
+    /* Propiedades de texto */ 
+    font-family: 'Open Sans';
+    font-size: 20px;
+    color: black;
+}
+
+
+.bloque {
+    /* Propiedades de margen */ 
+    margin-bottom: 45px;
+
+    /* Propiedades de disposición */
+    position: relative;
+
+    /*Propiedades de color*/ 
+    color: #000;
+
+    /*Propiedades de texto*/
+    text-decoration: none;
+}
+
+/*Animación: línea inferior al subrayar */ 
+
+.bloque::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.5s ease;
+}
+  
+.bloque:hover::before {
+    transform: scaleX(1);
+}
+
+/* Ajuste de las medias */ 
+
+
+@media (max-width: 1500px) {
+    body {
+        margin-top:0px;
+        margin-bottom: 10px;
+    }
+    
+    header, main {
+        margin-top:0px;
+        margin-bottom: 0px;
+        margin-left:250px;
+        margin-right: 250px; 
+    }
+    
+}
+
+@media (max-width: 1300px) {
+    
+    header, main {
+        margin-left:200px;
+        margin-right: 200px; 
+    }
+    
+}
+
+@media (max-width: 1150px) {
+    
+    header, main {
+        margin-left:150px;
+        margin-right: 150px; 
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    
+    header, main {
+        margin-left:100px;
+        margin-right: 100px; 
+    }
+    
+}
+
+@media (max-width: 800px) {
+    
+    header, main {
+        margin-left:50px;
+        margin-right: 50px; 
+    }
+    
+}
+
+@media (max-width: 700px) {
+    
+    header, main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+}
+
+@media (max-width: 610px) {
+    
+    header, main {
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 10px;
+    }
+    #titulo  {
+        font-size: 40px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 110px;
+    }
+    .parrafo_interior_bloque {
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    header, main {
+
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 10px;
+    }
+    #titulo  {
+        font-size: 32px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 100px;
+    }
+    .parrafo_interior_bloque {
+        font-size: 20px;
+    }
+    
+}
+
+
+@media (max-width: 389px) {
+    
+    header, main {
+        
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 5px;
+    }
+    #titulo  {
+        font-size: 30px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 65px;
+    }
+    .parrafo_interior_bloque {
+        font-size: 15px;
+    }
+    
+}
+
+.imagen_interior_bloque {
+    fill: gray;
+}
+
+@media (max-width: 254px) {
+    main {
+        padding: 0;
+        margin: 0;
+      
+    }
+
+    head {
+        padding: 0;
+        margin: 0;
+    }
+
+    .categorias {
+        padding: 0;
+        margin: 0;
+        background: transparent; /* Esto establece el fondo como transparente */ 
+    }
+
+    #titulo {
+        border: none;
+        background: transparent;
+    }
+ }

@@ -1,0 +1,628 @@
+/* General */
+
+/* Eliminar estilos predeterminados */
+
+a {
+    text-decoration: none;
+    color: inherit; 
+}
+
+* {
+    margin: 0; 
+    padding: 0;
+ 
+}
+
+body {
+    background-color: #f7f7f7;
+}
+
+footer {
+
+    margin-bottom: 100px;
+}
+
+/* Header */ 
+
+header {
+    /* Propiedades de margen */ 
+    margin-left:395px;
+    margin-right: 395px; 
+    padding-top: 45px;
+
+    /*Transición para suavizar cambios de margen*/
+    transition: margin 0.3s ease-in-out;
+}
+
+#titulo, #subtitulo {
+    
+    /* Propiedades de texto */
+    text-align: center;
+    font-family: 'Open Sans','Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+#titulo  {
+    
+    /* Propiedades de texto*/
+    color: black;
+    font-size: 55px;
+    font-weight: 300; 
+    
+    /* Propiedades de borde*/
+    font-family: sans-serif;
+    border-bottom: solid 4px rgb(0, 0, 0);
+    border-top: solid 4px rgb(0, 0, 0);
+    
+    /*Configuración de los bordes (borde de esquina)*/ 
+    padding: 7px 5px;
+    position: relative;
+    background:
+        linear-gradient(to right, black 4px, transparent 4px) 0 0,
+        linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+
+    /* Propiedades de color */ 
+    background-color: #fcfcfc;
+}
+
+#subtitulo {
+    /* Propiedades de margen */ 
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+    /* Propiedades de texto*/
+    letter-spacing: 3px;
+    font-weight: 100; 
+}
+
+/* Main */ 
+
+main {
+    
+    /* Propiedades de margen */ 
+    margin-left:395px;
+    margin-right: 395px; 
+    margin-top:45px;
+    height: 100%;
+
+    /*Propiedades de color*/ 
+    background-color: #fcfcfc;
+
+    /*Transición para suavizar cambios de margen*/
+    transition: margin 0.3s ease-in-out; /* Ajusta la duración y la función de temporización según tus necesidades */
+
+}
+
+.categorias {
+
+    /* Propiedades de disposición */ 
+    display: grid;
+    
+    grid-gap: 10px;
+
+    /* Propiedades de margen */
+    padding:20px;
+
+    /*Propiedades de bordes*/
+    background:
+        linear-gradient(to right, black 4px, transparent 4px) 0 0,
+        linear-gradient(to right, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to left, black 4px, transparent 4px) 100% 100%,
+        linear-gradient(to bottom, black 4px, transparent 4px) 0 0,
+        linear-gradient(to bottom, black 4px, transparent 4px) 100% 0,
+        linear-gradient(to top, black 4px, transparent 4px) 0 100%,
+        linear-gradient(to top, black 4px, transparent 4px) 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.interior_bloque {
+    /* Propiedades de texto */ 
+    text-align: center; 
+}
+
+.imagen_interior_bloque {
+    /* Propiedades de margen */ 
+    width: 300px;
+    margin: 0 auto;
+
+    /* Propiedades de disposición */ 
+    display: block;
+
+    /* Suavizado al aumentar la imagen en el hover */
+    transition: transform 0.3s; 
+}
+
+
+
+.parrafo_interior_bloque {
+
+    /* Propiedades de margen */ 
+    margin-top: 15px;
+    
+    /* Propiedades de texto */ 
+    font-family: 'Open Sans';
+    font-size: 20px;
+    color: black;
+}
+
+
+.bloque {
+    /* Propiedades de margen */ 
+    margin-bottom: 45px;
+
+    /* Propiedades de disposición */
+    position: relative;
+
+    /*Propiedades de color*/ 
+    color: #000;
+
+    /*Propiedades de texto*/
+    text-decoration: none;
+}
+
+/* Ajuste de las medias */ 
+
+
+@media (max-width: 1500px) {
+    body {
+        margin-top:0px;
+        margin-bottom: 10px;
+    }
+    
+    header, main {
+        margin-top:0px;
+        margin-bottom: 0px;
+        margin-left:250px;
+        margin-right: 250px; 
+    }
+    
+}
+
+@media (max-width: 1300px) {
+    
+    header, main {
+        margin-left:200px;
+        margin-right: 200px; 
+    }
+    
+}
+
+@media (max-width: 1150px) {
+    
+    header, main {
+        margin-left:150px;
+        margin-right: 150px; 
+    }
+    
+}
+
+@media (max-width: 1000px) {
+    
+    header, main {
+        margin-left:100px;
+        margin-right: 100px; 
+    }
+    
+}
+
+@media (max-width: 850px) {
+    
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 270px;
+      
+    }
+    
+}
+
+@media (max-width: 800px) {
+    
+    header, main {
+        margin-left:50px;
+        margin-right: 50px; 
+    }
+    
+}
+
+@media (max-width: 700px) {
+    
+    header, main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+}
+
+@media (max-width: 610px) {
+    
+    header, main {
+
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 10px;
+    }
+    #titulo  {
+        font-size: 40px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 250px;
+    }
+    .parrafo_interior_bloque {
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width: 450px) {
+    header, main {
+
+        margin-left: 10px;
+        margin-right: 10px;
+        
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 10px;
+    }
+    #titulo  {
+        font-size: 32px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 18px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .parrafo_interior_bloque {
+        font-size: 20px;
+    }
+    
+}
+
+
+@media (max-width: 389px) {
+    
+    header, main {
+        
+        margin-left: 10px;
+        margin-right: 10px;
+
+    }
+
+    .categorias {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .bloque {
+        margin-bottom: 5px;
+    }
+    #titulo  {
+        font-size: 30px;
+    }
+    #subtitulo {
+        margin-bottom: 15px;
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 200;
+        letter-spacing: normal;
+    }
+    .parrafo_interior_bloque {
+        font-size: 15px;
+    }
+    
+}
+
+@media (max-width: 296px) {
+    .imagen_interior_bloque {
+        /* Propiedades de margen */ 
+        width: 150px;
+    }
+}
+/* Otros archivos */ 
+
+/*Este archivo se diferencia del estilo-index en que contiene los estilos para redactar dentro de la superficie de "categorías"
+sin estar impedido por el grid*/
+
+/*Encabezados*/ 
+h1,h2,h3,h4,h5,h6{
+    font-family: Open Sans;
+    color: #525252;
+}
+
+h1 {
+    font-size: 32px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 19px;
+}
+
+
+p, li{
+    font-size: 16px;
+    font-family: Open Sans;
+}
+/* Estilo para la lista */
+ul {
+    margin-left: 50px;
+}
+
+/* Estilo para los elementos de la lista */
+li {
+    list-style: none;
+    margin-bottom: 10px;
+    margin-right: 50px;
+    position: relative; /* Posición relativa para permitir posicionar la sublista */
+}
+
+/* Estilo para el marcador de la lista */
+li:before {
+    content: ""; /* Insertar contenido antes de cada elemento de la lista */
+    display: inline-block; /* Mostrar el contenido como un bloque en línea */
+    width: 10px; /* Ancho del círculo */
+    height: 10px; /* Altura del círculo */
+    background-color:  #525252;/* Color del círculo */
+    border-radius: 25%; /* Hacer el círculo redondeado */
+    margin-right: 5px; /* Espacio entre el círculo y el texto del elemento */
+    position: absolute; /* Posición absoluta para colocar el marcador */
+    left: -25px; /* Alinear el marcador a la izquierda del elemento de la lista */
+    top: 50%; /* Alinear el marcador verticalmente al centro del elemento de la lista */
+    transform: translateY(-50%); /* Ajustar verticalmente el marcador */
+}
+
+
+p a{
+    font-weight: 600;
+    text-decoration: underline;
+    color: #525252;
+}
+
+/*Tabla*/
+tr  {
+    font-family: Open Sans;
+}
+tbody tr {
+    cursor: pointer;
+}
+table{
+    margin-bottom:15px;
+    border-collapse:collapse;
+    width:100%;
+}
+  
+thead{
+    color:white;
+    
+}
+  
+th,td{
+    text-align:center;
+    padding:5px 0;
+}
+  
+tbody tr:nth-child(even){
+    background:#ECF0F1;
+}
+  
+tbody tr:hover{
+    background:#BDC3C7;
+    color:#FFFFFF;
+}
+  
+.gris{
+    border:2px solid #525252;
+}
+  
+.gris thead{
+    background:#525252;
+}
+
+/* Otros archivos */ 
+
+table{
+    border-collapse:collapse;
+    width:100%;
+}
+  
+thead{
+    color:white;
+}
+  
+th,td{
+    text-align:center;
+    padding:5px 0;
+}
+  
+tbody tr:nth-child(even){
+    background:#ECF0F1;
+}
+  
+tbody tr:hover{
+    background:#BDC3C7;
+    color:#FFFFFF;
+}
+  
+.gris{
+    border:2px solid #525252;
+}
+  
+.gris thead{
+    background:#525252;
+}
+
+
+img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente según el ancho */
+    margin: auto; /* Márgenes automáticos para centrar la imagen horizontalmente */
+}
+
+@media (max-width: 610px) {
+    h1 {
+        font-size: 23px;
+    }
+   
+    h2 {
+        font-size:16px;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    p, li{
+        font-size: 13px;
+    }
+
+    tr {
+        font-size: 13px;
+    }
+
+    li {
+        margin-left:25px;
+        margin-bottom: 8px;
+        margin-right: 25px;
+    }
+
+}
+
+.portada {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px;
+    width: 70%; 
+}
+
+.galeria-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
+}
+
+/* Estilo para las imágenes dentro de la cuadrícula */
+.galeria-item img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    margin: 0 auto;  /* Centra horizontalmente utilizando margen automático */
+    display: block; 
+}
+
+/* Estilo para los párrafos de descripción debajo de las imágenes */
+.galeria-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+}   
+
+  .youtube {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:70%;
+    height:300px
+  }
+
+  @media (max-width: 1000px) {
+    .youtube{
+        height: 300px;
+    }
+  }
+
+  @media (max-width: 610px) {
+    .youtube{
+        height: 200px;
+    }
+  }
+
+  @media (max-width: 300px) {
+
+    main {
+        margin:2px
+    }
+
+    .portada {
+        margin-left: 25px;
+    }
+
+    .youtube {
+        margin-left: 15px;
+        width: 225px;
+    }
+
+
+    .categorias {
+        padding: 12px;
+    }
+
+    .galeria-item img {
+        width: 90%;
+        margin: 0;
+    }
+
+    p {
+        margin-right: 20px;
+    }
+    
+  }
+
+
+
+
+ @media (max-width: 254px) {
+    main {
+        padding: 0;
+        margin: 0;
+      
+    }
+
+    head {
+        padding: 0;
+        margin: 0;
+    }
+
+    .categorias {
+        padding: 0;
+        margin: 0;
+        background: transparent; /* Esto establece el fondo como transparente */ 
+    }
+
+    #titulo {
+        border: none;
+        background: transparent;
+    }
+ }

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Query Language - Hugo Ruiz Sánchez</title>
+    <link rel="stylesheet" href="../../estilos/estilo-otros.css">
+    <!-- Fuentes -->
+        <!-- Open Sans-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Source Code Pro -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- /Fuentes -->
+</head>
+
+<body>
+
+    <header > 
+        <a href="../../index.html"> <h1 id="titulo"> HUGO RUIZ SÁNCHEZ </h1> </a>
+        <h2 id="subtitulo"> Bible Query Language</h2>
+    </header>
+
+    <main> 
+
+        <div class="categorias">
+
+            <h1> Bible Query Language </h1>
+            <p> <i> Herramienta de consultas bíblicas en línea de comandos</i></p>
+
+            <img class="portada" src="demostracion.gif">
+
+            <h2> Introducción y funcionamiento</h2>
+
+            <p> La Biblia es un conjunto de 66 libros ordenados por nombre, capítulo y versículo. El estándar de citación empleado a lo largo de la historia por los estudiosos responde a la necesidad de referenciar de forma concisa y efectiva los textos bíblicos. 
+ 
+            <p> Con frecuencia, los documentos académicos citan largas listas de versículos tediosas de consultar manualmente. Por ejemplo, la siguiente es una lista de versículos de la Biblia de Estudio John MacArthur: </p> 
+            
+            <p> Mt 7:15; Hch 20:29, Ga 2:4-5; 1 Ti 4:1-3; 2 P 2:1,20; 1 Jn 2:18-23; 2 Co 11:13-15;  </p>
+            
+            <p> Bible Query Language (BQL) es el software que subsanará este problema, permitiendo realizar consultas de listas en el formato estándar y retornarlas en una forma legible.</p>
+
+            <h2> Versiones </h2>
+
+            <h3> BQL prealpha-0.1.1 </h3>
+            <ul> 
+                <li> Mejoras generales en la implementación de la interfaz temporal de comandos. </li>
+                <li> Ahora los XML de las biblias se deberán encontrar en la carpeta 'bqlbibles'.  </li>
+                <li> Se informara del tiempo de procesamiento entre consultas.  </li> 
+                <li> Agregado comando SELECT CONFIGURATION que visualiza la configuración actual. </li>
+                <li> Agregada notificación de errores al usuario: error de formato y libro no reconocido. </li>
+                <li> Solucionado error que no mostraba versículos en citas de capítulos múltiples. </li>
+                <li> Solucionado error de cierre al reconocer sentencia vacía. </li>
+            </ul>
+
+            <h3> BQL prealpha-0.1.0 </h3>
+ 
+            <ul> 
+                <li>Interfaz temporal de comandos incompleta, dotada de funciones sencillas.  </li>
+                <li>SET VERSION = version.xml -> Selección de versión.  </li>
+                <li>SET ENABLE_VERSES = true / false -> Ver versículos: sí/no  </li>
+                <li>SET LINE_SPACING = n -> Espaciado de línea.  </li>
+                <li>SELECT configurations; -> Ver configuraciones  </li>
+                <li>QUOTE (versiculo) -> Citar versículo.   </li>
+                <li>Compatible con modelos XML "Zefania" que deben introducirse en la carpeta raíz.  </li>
+                <li>Consultas solo en un formato:  </li>
+                <ul> 
+                    <li>Libro capitulo (Mt 5) </li>
+                    <li>Libro capitulo:versiculo (Mt 5:3) </li>
+                    <li>Libro capitulo:versiculo-versiculo (Mt 5:3-6) </li>
+                    <li>Libro capitulo:versiculo-capitulo:versiculo (Mt 5:3-6:12) </li>
+                    <li>Libro capitulo-capitulo (Mt 5-6) </li>
+                    <li>Libro versiculo, si se trata de un libro con un solo versículo (Jud 5)</li>
+                </ul>
+                
+            </ul>
+            <h2> Repositorio y descarga </h2>
+
+            <p> Puedes ver y descargar el repositorio en <a  target="_blank" href="https://github.com/hugoruizsanchez/BibleQueryLanguage">esta página de GitHub</a>.</p>
+
+        </div>
+    </main>
+    <footer> </footer>
+</body>
+
+</html>

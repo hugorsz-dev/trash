@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatización de una página web - Hugo Ruiz Sánchez</title>
+    <link rel="stylesheet" href="../../estilos/estilo-otros.css">
+    <!-- Fuentes -->
+        <!-- Open Sans-->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+        <!-- Source Code Pro -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+    <!-- /Fuentes -->
+</head>
+
+<body>
+
+    <header > 
+        <a href="../../index.html"> <h1 id="titulo"> HUGO RUIZ SÁNCHEZ </h1> </a>
+        <h2 id="subtitulo"> Automatización de una página web</h2>
+    </header>
+
+    <main> 
+
+        <div class="categorias">
+
+            <h1> Automatización de una página web </h1>
+            <p> <i> Un portal de teología que enlaza archivos PDF y HTML</i></p>
+
+            <img class="portada" src="captura-web.png">
+
+            <h2> Introducción y funcionamiento</h2>
+
+            <p> Se trata de un proyecto personal, que se adecúa a las necesidades particulares de mi objetivo concreto - la integración automática de contenido a mi web teológica "Estudio Escrituras" -, cuya estructura difiere a la de otro tipo de webs. No es un software de gestión automática de páginas webs, sino mi solución particular aplicada a un único contexto, publicado para ser utilizado como mera referencia y apoyo. 
+ 
+            <ul>
+                <li>Cada archivo está organizado en su correspondiente carpeta, bien sea una comparativa, un devocional o un estudio.</li>
+                <li>Un script escrito en bash, <i>exportar.sh</i> crea una nueva estructura de carpetas y opera sobre los directorios de mi área de trabajo, convirtiendo automáticamente cada archivo en su interior en formatos .pdf y .html, que son los que presento en esta página.</li>
+                <li>Este procedimiento usa las utilidades que brinda LibreOffice para la consola de comandos, denominadas <i>soffice</i>.</li>
+                <li>Las exportaciones en PDF siempre funcionan bien, pero cuando hago el mismo proceso con HTML, el formato tiende a desconfigurarse.</li>
+                <li>Finalmente, un programa escrito en Python, <i>compilar-web.py</i> inspecciona la estructura de carpetas creada por el script anterior, creando los archivos .html necesarios para enlazar todos los documentos en una página web completa y funcional.</li>
+            </ul>
+            
+            <h2> Demostración en vídeo</h2>
+            <iframe class="youtube" src="https://www.youtube.com/embed/zJv39calW48" title="Terminal Essentials - Librería para desarrollo de proyectos en terminal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+            
+
+            <h2> Repositorio y descarga </h2>
+
+            <p> Puedes ver y descargar el repositorio en <a  target="_blank" href="https://github.com/hugoruizsanchez/web-automatica-estudio-escrituras">esta página de GitHub</a>.</p>
+
+        </div>
+    </main>
+    <footer> </footer>
+</body>
+
+</html>
