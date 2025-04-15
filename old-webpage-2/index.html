@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hugorsz</title>
+
+  <style>
+    * {
+      margin: 0 auto;
+      box-sizing: border-box;
+    }
+
+    a {
+      color: #925437;
+      text-decoration: none;
+    }
+
+    /* Typography */
+    h1 {
+      position: relative;
+      text-align: center;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .header {
+      height: 100%;
+      margin: 0;
+    }
+
+    .logo {
+      color: rgba(24, 24, 24, 0.664);
+      font-family: 'Times New Roman', Times, serif;
+      text-decoration: dotted;
+      margin-top: 30px;
+      cursor: pointer;
+    }
+
+    .introduction {
+      margin-top: 15px;
+      margin-bottom: 15px;
+      text-align: center;
+      font-size: 17px;
+      text-shadow:
+        90px -90px rgb(250, 250, 250),
+        80px -80px rgb(245, 245, 245),
+        70px -70px rgb(240, 240, 240),
+        60px -60px rgb(235, 235, 235),
+        50px -50px rgb(230, 230, 230),
+        40px -40px rgb(225, 225, 225),
+        30px -30px rgb(220, 220, 220),
+        20px -20px rgb(215, 215, 215),
+        10px -10px rgb(210, 210, 210);
+      cursor: pointer;
+    }
+
+    .divider {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .left {
+      flex: 1;
+      padding: 10px;
+      margin-top: 20px;
+      margin-left: 25px;
+    }
+
+    .right {
+      border-left: 1px solid #808080;
+      flex: 0 0 30%;
+      padding: 10px;
+      background-color: rgb(235, 235, 235);
+    }
+
+    .right h2 {
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      padding: 10px;
+      width: 100%;
+      border: 2px dotted #404040;
+      border-radius: 5px;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 20px;
+      color: #404040;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .right h2 p {
+      margin-top: 10px;
+      font-size: 15px;
+      font-style: italic;
+      font-weight: 100;
+    }
+
+    /* Left Column Typography */
+    .left h1 {
+      text-align: left;
+      font-size: 28px;
+      color: rgba(24, 24, 24, 0.8);
+      margin-top: 17px;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(24, 24, 24, 0.5);
+      font-weight: bold;
+    }
+
+    .left h2 {
+      text-align: left;
+      font-size: 24px;
+      color: rgba(24, 24, 24, 0.75);
+      margin-top: 25px;
+      margin-bottom: 12px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid rgba(24, 24, 24, 0.3);
+    }
+
+    .left h3 {
+      font-size: 20px;
+      color: rgba(24, 24, 24, 0.7);
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .left h4 {
+      font-size: 18px;
+      color: rgba(24, 24, 24, 0.7);
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-style: italic;
+    }
+
+    .left h5 {
+      font-size: 16px;
+      color: rgba(24, 24, 24, 0.7);
+      margin-top: 12px;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+
+    .left h6 {
+      font-size: 15px;
+      color: rgba(24, 24, 24, 0.65);
+      margin-top: 10px;
+      margin-bottom: 6px;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    .left p {
+      margin-bottom: 16px;
+      text-align: justify;
+      font-size: 17px;
+    }
+
+    .left strong {
+      color: rgba(24, 24, 24, 0.9);
+      font-weight: bold;
+    }
+
+    .left em {
+      font-style: italic;
+    }
+
+    .left blockquote {
+      margin: 20px 0;
+      padding: 10px 20px;
+      border-left: 4px solid #9e5a3a;
+      background-color: rgba(235, 235, 235, 0.5);
+      font-style: italic;
+    }
+
+    .left ul,
+    .left ol {
+      margin: 15px 0 15px 25px;
+    }
+
+    .left li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .left a {
+      color: #9e5a3a;
+      text-decoration: none;
+      border-bottom: 1px dotted #9e5a3a;
+      transition: color 0.3s, border-bottom 0.3s;
+    }
+
+    .left a:hover {
+      color: #7e4b3e;
+      border-bottom: 1px solid #7e4b3e;
+    }
+
+    .left code {
+      font-family: monospace;
+      background-color: rgba(235, 235, 235, 0.7);
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    .left pre {
+      background-color: rgba(235, 235, 235, 0.7);
+      padding: 15px;
+      border-radius: 5px;
+      overflow-x: auto;
+      margin: 15px 0;
+      border: 1px solid #d0d0d0;
+    }
+
+    .left img {
+      max-width: 50%;
+      height: auto;
+      margin: 20px auto;
+      border: 5px solid transparent;
+      display: block;
+    }
+
+    .left hr {
+      margin: 25px 0;
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(24, 24, 24, 0.5), rgba(0, 0, 0, 0));
+    }
+
+    .left img {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 10px;
+    }
+
+    .left img img {
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    #picture {
+      width: 300px;
+      display: block;
+      margin: 0 auto;
+      padding: 15px;
+      margin-top: 10px;
+      background-color: #fff;
+      border: 10px solid transparent;
+      border-image: linear-gradient(45deg, #7e4b3e, #9e5a3a, #6a3b28, #c2794c) 1;
+      box-sizing: border-box;
+    }
+
+    .warning-box {
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      background-color: #d0d0d0;
+      border: 1px solid #808080;
+      padding: 8px;
+      margin-bottom: 10px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .htma-powered {
+      width: 85px;
+      height: auto;
+      margin-right: 10px;
+      margin-left: 0;
+    }
+
+    .warning-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .warning-title {
+      font-size: 18px;
+      font-weight: bold;
+      color: #404040;
+      margin: 0;
+    }
+
+    .warning-message {
+      font-size: 14px;
+      color: #222222;
+      margin-top: 3px;
+    }
+
+    .clock {
+  border-radius: 8px;
+  text-align: center;
+  font-size: 3em;
+  background-color: #0a2e0a;
+  padding: 15px;
+  border: 5px solid #1c3b1c;
+  box-shadow: inset 0 0 15px rgba(0, 255, 0, 0.15), 0 0 5px rgba(0, 100, 0, 0.5);
+  color: #33ff33;
+  font-family: 'VT323', 'Courier New', monospace;
+  font-weight: normal;
+  margin: 15px auto;
+  max-width: 300px;
+  letter-spacing: 3px;
+  text-shadow: 0 0 8px rgba(51, 255, 51, 0.7);
+  position: relative;
+}
+
+.clock::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.15) 2px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0) 4px
+  );
+  pointer-events: none;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      margin-left: -20px;
+      padding: 20px;
+      font-family: 'Times New Roman', Times, serif;
+      color: rgba(24, 24, 24, 0.8);
+      border: 1px solid #808080;
+    }
+
+    thead {
+      background-color: rgb(235, 235, 235);
+    }
+
+    th {
+      padding: 12px 15px;
+      text-align: left;
+      font-size: 18px;
+      border-bottom: 2px solid rgba(24, 24, 24, 0.5);
+    }
+
+    td {
+      padding: 10px 15px;
+      border-bottom: 1px solid #d0d0d0;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    tr:hover {
+      background-color: #e2e2e2;
+    }
+
+    .table-special {
+      border: 10px solid transparent;
+      border-image: linear-gradient(45deg, #7e4b3e, #9e5a3a, #6a3b28, #c2794c) 1;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-featured thead {
+      background-color: rgba(24, 24, 24, 0.664);
+      color: white;
+    }
+
+    .table-rounded {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .table-rounded th:first-child {
+      border-top-left-radius: 8px;
+    }
+
+    .table-rounded th:last-child {
+      border-top-right-radius: 8px;
+    }
+
+    .table-rounded tr:last-child td:first-child {
+      border-bottom-left-radius: 8px;
+    }
+
+    .table-rounded tr:last-child td:last-child {
+      border-bottom-right-radius: 8px;
+    }
+
+    .site-footer {
+      border-top: 1px solid #808080;
+      background-color: rgb(235, 235, 235);
+      padding: 30px 0 15px;
+      font-family: 'Times New Roman', Times, serif;
+    }
+
+    .footer-content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .footer-logo {
+      margin-bottom: 20px;
+      flex: 1 0 250px;
+    }
+
+    .footer-title {
+      color: rgba(24, 24, 24, 0.664);
+      font-size: 24px;
+      margin-bottom: 8px;
+      font-weight: normal;
+    }
+
+    .footer-tagline {
+      font-style: italic;
+      color: rgba(24, 24, 24, 0.7);
+      margin-top: 5px;
+      font-size: 16px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      flex: 2 0 300px;
+    }
+
+    .footer-section {
+      padding: 0 20px;
+      flex: 1 0 150px;
+      margin-bottom: 20px;
+    }
+
+    .footer-section h4 {
+      color: rgba(24, 24, 24, 0.8);
+      font-size: 18px;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+      border-bottom: 1px dotted rgba(24, 24, 24, 0.3);
+    }
+
+    .footer-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-section ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-section a {
+      color: #9e5a3a;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-section a:hover {
+      color: #7e4b3e;
+      border-bottom: 1px dotted #7e4b3e;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 15px;
+      margin-top: 20px;
+      border-top: 1px dotted #808080;
+      color: rgba(24, 24, 24, 0.6);
+      font-size: 14px;
+    }
+
+    .footer-bottom p {
+      margin: 5px 0;
+    }
+
+    .footer-bottom a {
+      color: #9e5a3a;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      border-bottom: 1px dotted #9e5a3a;
+    }
+
+    @media screen and (max-width: 768px) {
+      .footer-content {
+        flex-direction: column;
+      }
+
+      .footer-links {
+        flex-direction: column;
+      }
+
+      .footer-section {
+        padding: 0;
+        margin-top: 15px;
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .divider {
+        height: auto;
+      }
+
+      .right {
+        flex: 0 0 35%;
+      }
+    }
+
+    @media screen and (max-width: 992px) {
+      .divider {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .left,
+      .right {
+        flex: 1;
+        width: 100%;
+        margin: 0;
+        padding: 15px;
+      }
+
+      .right {
+        border-left: none;
+        border-top: 1px solid #808080;
+      }
+
+      .left h1 {
+        font-size: 24px;
+      }
+
+      .left h2 {
+        font-size: 22px;
+      }
+
+      .introduction {
+        text-shadow: none;
+        /* Simplificar el texto en pantallas más pequeñas */
+        font-size: 16px;
+      }
+
+      #picture {
+        width: 250px;
+      }
+
+      .clock {
+        font-size: 2.5em;
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      .logo {
+        margin-top: 20px;
+      }
+
+      .left h1 {
+        font-size: 22px;
+      }
+
+      .left h2 {
+        font-size: 20px;
+      }
+
+      .left h3 {
+        font-size: 18px;
+      }
+
+      .left p,
+      .left li {
+        font-size: 16px;
+      }
+
+      .table-rounded {
+        border-radius: 5px;
+      }
+
+      table {
+        font-size: 14px;
+      }
+
+      th {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      td {
+        padding: 8px;
+      }
+
+      #picture {
+        width: 200px;
+      }
+
+      .warning-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .htma-powered {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+
+      .clock {
+        font-size: 2em;
+        padding: 15px;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .logo {
+        margin-top: 15px;
+      }
+
+      .introduction {
+        font-size: 15px;
+        margin: 10px 0;
+      }
+
+      .left,
+      .right {
+        padding: 10px;
+      }
+
+      .left h1 {
+        font-size: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .left h2 {
+        font-size: 18px;
+      }
+
+      .left h3 {
+        font-size: 17px;
+      }
+
+      .left h4,
+      .left h5,
+      .left h6 {
+        font-size: 16px;
+      }
+
+      .left p,
+      .left li {
+        font-size: 15px;
+        text-align: left;
+       }
+
+      .left blockquote {
+        padding: 8px 15px;
+      }
+
+      .left pre {
+        padding: 10px;
+      }
+
+      #picture {
+        width: 100%;
+        max-width: 180px;
+      }
+
+      .right h2 {
+        font-size: 18px;
+        padding: 8px;
+      }
+
+      .right h2 p {
+        font-size: 14px;
+      }
+
+      .clock {
+        font-size: 1.5em;
+        padding: 10px;
+        border-width: 4px;
+      }
+
+      .left img {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+        gap: 8px;
+      }
+    }
+
+    @media screen and (max-width: 400px) {
+      .logo {
+        margin-top: 10px;
+      }
+
+      .left h1 {
+        font-size: 18px;
+      }
+
+      .left h2 {
+        font-size: 17px;
+      }
+
+      .left h3,
+      .left h4,
+      .left h5,
+      .left h6 {
+        font-size: 16px;
+      }
+
+      .left p,
+      .left li {
+        font-size: 14px;
+      }
+
+      .left code {
+        font-size: 13px;
+      }
+
+      #picture {
+        max-width: 150px;
+        padding: 8px;
+      }
+
+      .clock {
+        font-size: 1.2em;
+      }
+
+      .warning-title {
+        font-size: 16px;
+      }
+
+      .warning-message {
+        font-size: 12px;
+      }
+
+      .left img {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 5px;
+      }
+
+      table {
+
+        padding: 0;
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+      }
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 992px) and (orientation: landscape) {
+      .divider {
+        flex-direction: row;
+      }
+
+      .left {
+        flex: 0 0 65%;
+      }
+
+      .right {
+        flex: 0 0 35%;
+        border-left: 1px solid #808080;
+        border-top: none;
+      }
+    }
+
+    /* Imprimir */
+    @media print {
+      .divider {
+        display: block;
+        height: auto;
+      }
+
+      .right {
+        display: none;
+      }
+
+      .left {
+        width: 100%;
+      }
+
+      .clock,
+      .warning-box {
+        display: none;
+      }
+
+      .left h1,
+      .left h2,
+      .left h3,
+      .left h4,
+      .left h5,
+      .left h6 {
+        page-break-after: avoid;
+      }
+
+      .left p,
+      .left ul,
+      .left ol,
+      .left img,
+      .left blockquote {
+        page-break-inside: avoid;
+      }
+
+      body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000;
+      }
+
+      a::after {
+        content: " (" attr(href) ")";
+        font-size: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1 class="logo"> hugorsz </h1>
+    <div class="introduction">
+      Tragedias y esperanzas en tiempos de internet
+    </div>
+    <hr>
+
+  </header>
+
+  <div class="divider">
+    <div class="left">
+      <h1>Bienvenido, visitante.</h1>
+
+      <p> Este es el discreto rincón de la red donde doy rienda suelta a mis dos grandes aficiones: la
+        programación y la teología.
+        La mayor parte de las páginas que encontrarás aquí no contienen más que publicaciones impersonales,
+        subidas automáticamente cada cierto tiempo.
+      </p>
+      <ul>
+        <li>Sección de teología.</li>
+        <li>Sección de programación.</li>
+      </ul>
+
+    </div>
+    <div class="right">
+
+      <div class="clock" id="clock"></div>
+
+      <h2> Expositorio de cuadros aleatorios
+        <img src="img/1.webp" id="picture" alt="Imagen sobre la que se carga un cuadro aleatorio">
+        <p id="picture-description"> sfnmkeknf</p>
+      </h2>
+
+
+      <h2> Entradas destacadas
+        <p> Todavía no hay entradas destacadas, ¡lo siento!</p>
+      </h2>
+
+      </h2>
+
+      <div class='warning-box'>
+        <img class="htma-powered" src="img/htma-powered.webp" alt="HTMA Powered" />
+        <div class='warning-content'>
+          <div class='warning-title'>Sitio autogenerado</div>
+          <p class='warning-message'>La mayoría de estas páginas han sido creadas mediante mi propio generador
+            de sitios
+            estáticos, <i>HTMA</i>. <a target="_blank" href="https://github.com/hugorsz-dev/HTMA">Si te
+              interesa el proyecto, mira su repositorio de
+              github</a>.</p>
+        </div>
+      </div>
+
+      <div class='warning-box'>
+        <img class="htma-powered" src="img/debian.webp" alt="HTMA Powered" />
+        <div class='warning-content'>
+          <div class='warning-title'>Impulsado por software libre</div>
+          <p class='warning-message'> El servidor que mantiene esta web está sostenido por <a target="_blank"
+              href="https://www.debian.org/">Debian</a>, una
+            distribución GNU/Linux <b> libre y de código abierto</b>. </p>
+        </div>
+      </div>
+
+      <div class='warning-box'>
+        <img class="htma-powered" src="img/cow.webp" alt="HTMA Powered" />
+        <div class='warning-content'>
+          <div class='warning-title'> mooo.com</div>
+          <p class='warning-message'> Se trata de un dominio gratuito, ofrecido por <a
+              href="https://freedns.afraid.org/">FreeDNS</a>, un servicio de DNS dinámico libre y
+            comunitario. 
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h3 class="footer-title">hugorsz</h3>
+        <p class="footer-tagline">Gracias por tu visita</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-section">
+          <h4>Contacto</h4>
+          <ul>
+            <li><a href="mailto:hugoruizschz@gmail.com">Email</a></li>
+            <li><a href="https://github.com/hugorsz-dev/">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 hugorsz. Contenido bajo licencia <a href="https://creativecommons.org/licenses/by/4.0/deed.es">Creative Commons</a>.</p>
+      <p>Impulsado por <a href="https://github.com/hugorsz-dev/HTMA">HTMA</a> y software libre.</p>
+    </div>
+  </footer>
+</body>
+
+<script>
+  const logo = document.querySelector('.logo');
+  const introduction = document.querySelector('.introduction');
+
+  logo.addEventListener('click', function () {
+    window.location.href = 'https://hugorsz.mooo.com/';
+  });
+  introduction.addEventListener('click', function () {
+    window.location.href = 'https://hugorsz.mooo.com/';
+  });
+
+  const randomNumber = Math.floor(Math.random() * 31) + 1;
+  document.getElementById("picture").setAttribute("src", `img/${randomNumber}.webp`);
+
+  const picture_descriptions = [
+    "ERROR",
+    "Jesucristo, retratado con el inconfundible estilo de Dominico Greco.",
+    "Saulo de Tarso, Pablo apóstol de los gentiles, predicando el evangelio en Atenas, sobre el monte Aerópago.",
+    "Una muchedumbre con espadas y palos, rodea el huerto de Getsemaní con el objetivo prender a Jesucristo.",
+    "Ester y Mardoqueo remitiendo a los judios el anuncio de la paz de sus enemigos.",
+    "Autorretrato del maestro Diego Velázquez en Las meninas. ",
+    "Flavio Belisario, comandante destacado del Imperio Bizantino, reducido a la mendicidad en las calles de Constantinopla.",
+    "Retrato representativo de la imagen de Dios el Padre, sujetando el mundo entre sus brazos.",
+    "«He aquí el Cordero de Dios, que quita el pecado del mundo».",
+    "La pequeña cerillera, aterida al calor de sus fósforos, contempla la ilusión de un hermoso árbol de navidad.",
+    "Una mujer cananea ruega a los pies de Cristo por la redención de su hija.",
+    "Diógenes de Sinope, aislado en su tinaja a la sombra de unas doncellas, que le miran con curiosidad.",
+    "El apóstol Pedro camina sobre las aguas para ir a Jesús. Pero venido un viento, tuvo miedo y comenzó a hundirse, prorrumpiendo su grito a voces, «Señor, sálvame».",
+    "El judío errante, maldito a caminar a perpetuidad, hasta la llegada de la parusía de Jesucristo.",
+    "Viejo se desespera leyendo la prensa.",
+    "Esteban, primer mártir del cristianismo, declamando a los judíos de la sinagoga de los libertos: «He aquí, veo los cielos abiertos, y al Hijo del Hombre que está a la diestra de DiosHe aquí, veo los cielos abiertos, y al Hijo del Hombre que está a la diestra de Dios».",
+    "Abraham Senneor, Rabino mayor de Castilla, comisionado de los judíos ante los Reyes Católicos, ofreciendo treinta mil ducados a cambio de retractar la decisión de la corona, de expulsar a los judíos de España.",
+    "María Magdalena, retratada con el inconfundible estilo de Dominico Greco.",
+    "Acuarela de Dalí, Adolf Hitler masturbándose sentado en un trineo tirado por cuatro ponis; «Hitler encarnaba para mí la imagen perfecta del gran masoquista que desencadenaba una Guerra Mundial por el solo placer de perderla y de enterrarse bajo las ruinas de un imperio».",
+    "Jesucristo orando al Padre en el huerto de Getsemaní, «Padre mío, si es posible, que pase de mí esta copa; pero no sea como yo quiero, sino como tú quieras».",
+    "Jesucristo de San Juan de la Cruz, bellamente contemplado desde los cielos, presentado sin sangre ni herida alguna.",
+    "José, el más pequeño de los hijos de Jacob, es vendido como esclavo a unos ismaelitas por sus propios hermanos.",
+    "Poncio Pilato interpelando a Jesucristo. «¿A mí no me hablas? ¿No sabes que tengo autoridad para crucificarte, y que tengo autoridad para soltarte?»",
+    "La Virgen María, San Juan Evangelista y María Magdalena, contemplando al Cristo yaciendo muerto.",
+    "María Magdalena, llevando consigo las especias para el ungimiento del cadáver de Jesús.",
+    "Panorámica del castillo de Neuschwanstein, en Baviera",
+    "Moisés alza sobre el pueblo de Israel los diez mandamientos, la ley que fundaba el Antiguo Pacto con Dios.",
+    "Sócrates, acusado de pervertir a sus kóvenes y alejarlos de los dioses, escenificado momentos antes de beber la cicuta.",
+    "Napoleón cruzando los Alpes, montado sobre un fogoso caballo.",
+    "Rodión Raskólnikov, reclinado en su diván, maquinando el asesinato de la anciana prestamista.",
+    "El hijo pródigo retorna a la casa de su padre, quien abalanzádose a su cuello, le besó. Arrodillado, no terminó de dar sus disculpas:  «Padre, he pecado contra el cielo y contra ti, y ya no soy digno de ser llamado tu hijo» ",
+    "El afamado escritor Don Francisco de Quevedo y Villegas, retratado por Juan van der Hamen."
+  ];
+
+  document.getElementById("picture-description").innerText = picture_descriptions[randomNumber];
+
+  function updateClock() {
+    const now = new Date();
+    let hours = now.getHours().toString().padStart(2, '0');
+    let minutes = now.getMinutes().toString().padStart(2, '0');
+    let seconds = now.getSeconds().toString().padStart(2, '0');
+    document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
+  };
+  setInterval(updateClock, 1000);
+  updateClock();
+
+
+
+</script>
+
+</html>
