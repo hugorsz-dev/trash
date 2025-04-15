@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir archivos </title>
+    <style>
+        h1, #result-url {
+            margin-top: 20px;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+        }
+
+        body {
+            background-color: gainsboro
+        }
+
+        #drop-zone {
+            border: 5px solid gray;
+            width: 400px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        #text-drop-zone {
+            margin-top: 125px;
+            margin-left: 51px;
+            display: inline-block; /* Necesario para que el transform funcione correctamente */
+            transform: rotate(-38deg); /* Cambia el valor para ajustar la inclinación */
+            font-size: 30px; /* Tamaño del texto */
+            color: #333; /* Color del texto */
+        }
+    </style>
+
+    <script>
+        function dropHandler(ev) {
+            console.log("File(s) dropped");
+
+            // Prevent default behavior (Prevent file from being opened)
+            ev.preventDefault();
+
+            if (ev.dataTransfer.items) {
+                // Use DataTransferItemList interface to access the file(s)
+                [...ev.dataTransfer.items].forEach((item, i) => {
+                    // If dropped items aren't files, reject them
+                    if (item.kind === "file") {
+                        const file = item.getAsFile();
+
+                        uploadFile(file); // Llamamos a la función para subir el archivo
+                        
+                        
+                        document.getElementById("drop-zone").style.borderColor="green"
+                        document.getElementById("text-drop-zone").style.color="green"
+                        setTimeout(function() {
+                            document.getElementById("text-drop-zone").style.color = "gray";
+                            document.getElementById("drop-zone").style.borderColor = "gray";
+                            document.getElementById("result-url").textContent = `https://hugoruizsanchez.xyz/uploads/${file.name}`;
+                        }, 750);
+                    }
+                });
+            } else {
+                // Use DataTransfer interface to access the file(s)
+                [...ev.dataTransfer.files].forEach((file, i) => {
+                    console.log(`… file[${i}].name = ${file.name}`);
+                    
+                    
+                    document.getElementById("drop-zone").style.color="green"
+                    document.getElementById("text-drop-zone").style.color="green"
+                    setTimeout(function() {
+                        document.getElementById("text-drop-zone").style.color = "gray";
+                        document.getElementById("drop-zone").style.color = "gray";
+                        document.getElementById("result-url").textContent = `https://hugorsz.mooo.com/uploads/${file.name}`;
+                    }, 750);
+    
+                });
+            }
+        } 
+        function dragOverHandler(ev) {
+            console.log("File(s) in drop zone");
+
+            // Prevent default behavior (Prevent file from being opened)
+            ev.preventDefault();
+        }
+
+        function uploadFile(file) {
+            const formData = new FormData();
+            formData.append("file", file);
+
+            fetch("upload.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    
+                })
+                .catch(error => {
+                    console.error("Error uploading file:", error);
+                });
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1> Panel de subida de archivos </h1>
+    <hr>
+        <div id="drop-zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
+            <p id="text-drop-zone"> Arrastra el archivo aquí </p>
+        </div>
+    <div id="result-url">  </div>
+</body>
+
+</html>
