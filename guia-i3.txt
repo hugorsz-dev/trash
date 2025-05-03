@@ -1,0 +1,15 @@
+- Controles i3
+
+Mover ventanas: alt+shift+(flechas)
+Ejecutar aplicación: alt+d
+Quitar aplicación: alt+shift+q
+Abrir terminal: alt+enter
+Abrir en modo pestañas: alt+w
+Abrir en modo tiling: alt+E
+Redimensionar: alt+r
+Seleccionar ventana: alt+(flechas)
+Llevar una ventana a otra workspace: alt+shift+(numero)
+Cambiar de workspace: alt+(numero)
+
+Cerrar la sesión: alt+shift+e
+

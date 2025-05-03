@@ -1,0 +1,165 @@
+  RESUMEN DE LA LECCIÓN 1
+
+
+  1. El cursor se mueve utilizando las teclas de las flechas o las teclas hjkl.
+         h (izquierda)     j (abajo)      k (arriba)      l (derecha)
+
+  2. Para acceder a Vim desde el símbolo del sistema escriba:
+     vim NOMBREARCHIVO <INTRO>
+
+  3. Para salir de Vim escriba: <ESC> :q! <INTRO> para eliminar todos
+     los cambios.
+     O escriba:  <ESC>  :wq  <INTRO> para guardar los cambios.
+
+  4. Para borrar un carácter bajo el cursor en modo Normal pulse:  x
+
+  5. Para insertar o añadir texto escriba:
+     i  escriba el texto a insertar <ESC> inserta el texto antes del cursor
+         A  escriba el texto a añadir <ESC> añade texto al final de la línea
+
+NOTA: Pulsando <ESC> se vuelve al modo Normal o cancela una orden no deseada
+      o incompleta.
+----------------------------------------
+
+ RESUMEN DE LA LECCIÓN 2
+
+  1. Para borrar desde el cursor hasta siguiente palabra pulse:      dw
+  2. Para borrar desde el cursor hasta el final de la palabra pulse: de
+  3. Para borrar desde el cursor hasta el final de una línea pulse:      d$
+  4. Para borrar una línea entera pulse:                             dd
+
+  5. Para repetir un movimiento anteponga un número:  2w
+  6. El formato para un comando de cambio es:
+               operador  [número]  movimiento
+     donde:
+       comando    - es lo que hay que hacer, por ejemplo,  d  para borrar
+       [número]   - es un número opcional para repetir el movimiento
+       movimiento - se mueve sobre el texto sobre el que operar, como
+                            w (palabra), $ (hasta el final de la línea), etc.
+  7. Para moverse al inicio de la línea utilice un cero:  0
+
+  8. Para deshacer acciones previas pulse:                       u (u minúscula)
+     Para deshacer todos los cambios de una línea pulse: U (U mayúscula)
+     Para deshacer lo deshecho pulse:                            CTRL-R
+
+-------------------
+
+
+                           RESUMEN DE LA LECCIÓN 3
+
+
+  1. Para volver a poner o pegar el texto que acaba de ser borrado,
+     escriba  p . Esto pega el texto después del cursor (si se borró una
+     línea, al pegarla, esta se situará en la línea debajo del cursor).
+
+  2. Para reemplazar el carácter bajo el cursor, pulse  r   y luego el
+     carácter que quiere que esté en ese lugar.
+
+  3. El operador change le permite cambiar desde la posición del cursor
+     hasta donde el movimiento indicado le lleve. Por ejemplo, pulse  ce
+     para cambiar desde el cursor hasta el final de la palabra, o  c$
+     para cambiar hasta el final de la línea.
+
+  4. El formato para change es:
+
+         c   [número]   movimiento
+
+  Pase ahora a la lección siguiente.
+
+-----------------------------
+
+                           RESUMEN DE LA LECCIÓN 4
+
+
+  1. CTRL-G  muestra la posición del cursor en el fichero y su estado.
+             G  mueve el cursor al final del archivo.
+     número  G  mueve el cursor a ese número de línea.
+            gg  mueve el cursor a la primera línea del archivo.
+
+  2. Escribiendo  /  seguido de una frase busca la frase hacia ADELANTE.
+     Escribiendo  ?  seguido de una frase busca la frase hacia ATRÁS.
+     Después de una búsqueda pulse  n  para encontrar la aparición
+     siguiente en la misma dirección o  N  para buscar en dirección opuesta.
+
+  3. Pulsando  %  cuando el cursor esta sobre (,), [,], { o } localiza
+     la pareja correspondiente.
+
+  4. Para cambiar viejo en el primer nuevo en una línea escriba  :s/viejo/nuevo
+   Para cambiar todos los viejo por nuevo en una línea escriba :s/viejo/nuevo/g
+   Para cambiar frases entre dos números de líneas escriba  :#,#s/viejo/nuevo/g
+   Para cambiar viejo por nuevo en todo el fichero escriba  :%s/viejo/nuevo/g
+   Para pedir confirmación en cada caso añada  'c'          :%s/viejo/nuevo/gc
+
+-----------------------------
+
+                         RESUMEN DE LA LECCIÓN 5
+
+
+  1.  :!comando  ejecuta un comando externo.
+
+      Algunos ejemplos útiles son:
+      (Windows)     (Unix)
+          :!dir          :!ls           - muestra el contenido de un directorio.
+          :!del ARCHIVO  :!rm ARCHIVO   -  borra el fichero ARCHIVO.
+
+  2.  :w ARCHIVO escribe el archivo actual de Vim en el disco con el
+      nombre de ARCHIVO.
+
+  3.  v  movimiento  :w ARCHIVO  guarda las líneas seleccionadas visualmente
+      en el archivo ARCHIVO.
+
+  4.  :r ARCHIVO  recupera del disco el archivo ARCHIVO y lo pega debajo
+      de la posición del cursor.
+
+  5.  :r !dir  lee la salida del comando dir y lo pega debajo de la
+      posición del cursor.
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                           RESUMEN DE LA LECCIÓN 6
+
+
+  1. Escriba  o  para abrir una línea por DEBAJO de la posición del cursor y 
+     entrar en modo Insertar.
+     Escriba  O  para abrir una línea por ENCIMA de la posición del cursor y
+     entrar en modo Insertar
+
+  2. Escriba  a  para insertar texto DESPUÉS del cursor.
+     Escriba  A  para insertar texto al final de la línea.
+
+  3. El comando  e  mueve el cursor al final de una palabra.
+
+  4. El operador  y  copia (yank) texto,  p  lo pega (pone).
+
+  5. Al escribir una  R  mayúscula entra en el modo Reemplazar hasta que
+     se pulsa  <ESC>  .
+
+  6. Al escribir ":set xxx" activa la opción "xxx".  Algunas opciones son:
+        'ic' 'ignorecase'       ignorar mayúsculas/minúsculas al buscar
+        'is' 'incsearch'        mostrar las coincidencias parciales para la búsqueda
+                        de una frase
+        'hls' 'hlsearch'        resalta todas las coincidencias de la frases
+     Puedes utilizar tanto los nombre largos o cortos de las opciones.
+
+  7. Añada "no" para inhabilitar una opción:   :set noic
+
+                               RESUMEN DE LA LECCIÓN 7
+
+  
+  1. Escriba  :help  o pulse <F1> o <HELP>  para abrir la ventana de ayuda.
+  
+  2. Escriba  :help cmd  para encontrar ayuda sobre  cmd .
+  
+  3. Escriba  CTRL-W CTRL-W  para saltar a otra ventana.
+  
+  4. Escriba  :q  para cerrar la ventana de ayuda.
+  
+  5. Cree un fichero vimrc de inicio para guardar sus ajustes preferidos.
+
+  6. Cuando escriba un comando  :  pulse CTRL-D para ver posibles opciones.
+     Pulse <TAB> para utilizar una de las opciones de completado.
+
+
+
+
+
